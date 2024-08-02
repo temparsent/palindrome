@@ -18,7 +18,8 @@ function Phrase(content) {
   //利用例
   // new Phrase("Hello, world!").letters() === "Helloworld"
   this.letters = function letters() {
-    return (this.content.match(/[a-z]/gi) || []).join("");
+    const lettersRegEx = /[a-z]/gi;
+    return (this.content.match(lettersRegEx) || []).join("");
   }
   // パリンドロームならtrueを、違うならfalseを返す
   this.palindrome = function palindrome() {
